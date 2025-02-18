@@ -120,7 +120,7 @@ class CanvasDemo:
         self.clear_snake_on_canvas()
         #self.canvas.delete(self.tail)
         self.redraw_snake()
-        if self.keyPressed == "Left":
+        if self.keyPressed in ["Left", "A", "a"]:
             self.window.after(100, self.moveLeft)
         
         
@@ -146,7 +146,7 @@ class CanvasDemo:
         
         #self.canvas.delete(self.preTail)
         self.redraw_snake()
-        if self.keyPressed == "Right":
+        if self.keyPressed in ["Right", "D", "d"]:
             self.window.after(100, self.moveRight)
                     
     def moveUp(self):
@@ -168,7 +168,7 @@ class CanvasDemo:
         self.clear_snake_on_canvas()
         #self.canvas.delete(self.tail)
         self.redraw_snake()
-        if self.keyPressed == "Up":
+        if self.keyPressed in ["Up", "W", "w"]:
             self.window.after(100, self.moveUp)
         
     def moveDown(self):
@@ -196,7 +196,7 @@ class CanvasDemo:
             
         #self.canvas.delete(self.preTail)
         self.redraw_snake()
-        if self.keyPressed == "Down":
+        if self.keyPressed in ["Down", "S", "s"]:
             self.window.after(100, self.moveDown)
         
     def clearCanvas(self):
@@ -221,13 +221,13 @@ class CanvasDemo:
         keyVal = event.keysym
         #print("Pressed", event.keysym)
         self.keyPressed = str(keyVal)
-        if self.keyPressed == "Left":
+        if self.keyPressed in ["Left", "A", "a"]:
             self.moveLeft()
-        elif self.keyPressed == "Right":
+        elif self.keyPressed in ["Right", "D", "d"]:
             self.moveRight()
-        elif self.keyPressed == "Up":
+        elif self.keyPressed in ["Up", "W", "w"]:
             self.moveUp()
-        elif self.keyPressed == "Down":
+        elif self.keyPressed in ["Down", "S", "s"]:
             self.moveDown()
     
     def clear_snake_on_canvas(self):
