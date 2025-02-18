@@ -6,7 +6,7 @@ from tkinter import * # Import all definitions from tkinter
 from tkinter import messagebox
 import random
 import time
-from _overlapped import NULL
+# from _overlapped import NULL
 
 class CanvasDemo:
     def __init__(self):
@@ -19,12 +19,12 @@ class CanvasDemo:
         self.__step = self.diameter#20
         self.snake = [[self.__x1, self.__y1], [self.__x1-self.diameter, self.__y1], [self.__x1-2*self.diameter, self.__y1], [self.__x1-3*self.diameter, self.__y1], [self.__x1-4*self.diameter, self.__y1]]
         self.segments = []
-        self.food = NULL
+        self.food = None
         self.foodX = 0
         self.foodY = 0
-        self.keyPressed = NULL
-        self.tail = NULL
-        self.preTail = NULL
+        self.keyPressed = None
+        self.tail = None
+        self.preTail = None
         self.__canvasWidth = 1000
         self.__canvasHeight = 800
         self.colors = ["blue"]#["red", "orange", "yellow", "green", "blue", "violet"]
